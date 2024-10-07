@@ -476,6 +476,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 73ac2a14ce2a49a4ea5f90204265d7ac, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1225705017}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 73ac2a14ce2a49a4ea5f90204265d7ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1225705019}
   m_SourcePrefab: {fileID: 100100000, guid: 73ac2a14ce2a49a4ea5f90204265d7ac, type: 3}
 --- !u!1 &1225705014 stripped
 GameObject:
@@ -492,7 +495,7 @@ Animator:
   m_GameObject: {fileID: 1225705014}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b1a6ec4d64350dc41947c013c37f5012, type: 2}
+  m_Controller: {fileID: 9100000, guid: ad8364c97c627514980d10054125e915, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -510,11 +513,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1225705014}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c939face961022249bc9ca29000328f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1225705019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225705014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11115f585c7b71349be8ea0063ef422a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 2
+  deceleration: 2
+  maxWalkVel: 0.5
+  maxRunVel: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ public class twoDimensionalAnimationStateController : MonoBehaviour
     float velocityX = 0.0f;
     public float acceleration = 2.0f;
     public float deceleration = 2.0f;
+    public float maxWalkVel = 0.5f;
+    public float maxRunVel = 2.0f;
 
     void Start()
     {
@@ -25,20 +27,22 @@ public class twoDimensionalAnimationStateController : MonoBehaviour
         bool rightPressed = Input.GetKey("d");
         bool runPressed = Input.GetKey("left shift");
 
+        float currMaxVel = runPressed ? maxRunVel : maxWalkVel;
+
         // move forward
-        if (forwardPressed && velocityZ < 0.5f)
+        if (forwardPressed && velocityZ < currMaxVel)
         {
             velocityZ += Time.deltaTime * acceleration;
         }
 
         // incraese vel in left
-        if (leftPressed && velocityX > -0.5f && !runPressed)
+        if (leftPressed && velocityX > -currMaxVel)
         {
             velocityX -= Time.deltaTime * acceleration;
         }
             
         // increase vel in right
-        if (rightPressed && velocityX < 0.5f && !runPressed)
+        if (rightPressed && velocityX < currMaxVel)
         {
             velocityX += Time.deltaTime * acceleration;
         }
